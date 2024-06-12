@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Login Page</title>
+        <title>Register Page</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -12,10 +12,10 @@
         @vite('resources/css/app.css')
     </head>
     <body class="font-sans antialiased h-screen dark:bg-black dark:text-white/50 flex items-center justify-center">
-            <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl">
+            <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl ">
                 <div class="w-1/2 p-5 pl-10 ">
-                    <h1 class="text-2xl pb-2 flex align-middle mt-10 pt-10">Login Page</h1>
-                    <p class="text-sm">If you're not member, please register in <a href="/register" class="text-yellow-500">here</a></p>
+                    <h1 class="text-2xl pb-2 flex align-middle">Register Page</h1>
+                    <p class="text-sm">If you're already a member, please log in <a href="/" class="text-yellow-500">here</a></p>
                     <form class="mt-4">
                         <div class="mb-4">
                             <label class="block text-sm mb-2" for="email">Email</label>
@@ -26,14 +26,9 @@
                             <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="password" id="password" placeholder="Enter your password" required>
                         </div>
                         <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <input class="mr-2" type="checkbox" id="remember_me">
-                                <label class="text-sm" for="remember_me">Remember me</label>
-                            </div>
-                            <a href="#" class="text-sm text-yellow-500">Forgot password?</a>
                         </div>
-                        <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg" type="submit">Login</button>
-                        <div class="text-center text-sm text-gray-400 mb-4 mt-4">Or login with</div>
+                        <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg" type="submit">Register</button>
+                        <div class="text-center text-sm text-gray-400 mb-4 mt-4">Or register with</div>
                         <button class="w-full bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 py-2 rounded-lg flex items-center justify-center" type="button">
                             <img class="w-5 h-5 mr-2" src="https://www.svgrepo.com/show/355037/google.svg" alt="Google Logo">
                             Google
@@ -41,7 +36,7 @@
                     </form>
                 </div>
                 <div class="w-1/2  p-5">
-                    <img class="rounded-2xl" src="https://static.vecteezy.com/system/resources/previews/030/316/663/large_2x/cart-in-context-supermarket-shopping-cart-amidst-blurred-store-bokeh-atmosphere-vertical-mobile-wallpaper-ai-generated-free-photo.jpg" alt="">
+                    <img class="rounded-2xl mt-7" src="https://img.freepik.com/free-vector/sign-concept-illustration_114360-125.jpg" alt="">
                 </div>
             </section>
     </body>
