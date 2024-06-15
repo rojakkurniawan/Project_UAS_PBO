@@ -66,7 +66,7 @@
             </p>
          </div>
          <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mb-10">
-            <div class="mx-5 h-32 mt-5">
+            <div class="mx-5 h-full mt-5">
                <div class="space-y-2">
                   <details class="rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
                      <summary class="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
@@ -134,7 +134,7 @@
                   </details>
                </div>
             </div>
-            <div class="h-32 rounded-lg mt-5 lg:col-span-2 lg:mx-5">
+            <div class="h-full rounded-lg mt-5 lg:col-span-2 lg:mx-5">
                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
                   <div class="block rounded-xl bg-white shadow-md dark:bg-neutral-700 text-center">
                      <a href="#!">
