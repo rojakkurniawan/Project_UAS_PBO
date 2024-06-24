@@ -21,7 +21,7 @@
         </p>
      </div>
      
-     <section class="max-w-screen-xl mx-auto my-8 p-4">
+     <section class="max-w-screen-xl mx-auto my-4 p-4">
        <div class="bg-gray-900 p-10 rounded-lg shadow-lg flex">
            @foreach($product as $product)
           <img src="{{$product -> url_image_product}}" alt="Product Image" class="w-1/3 h-auto rounded mr-8">
@@ -33,20 +33,20 @@
           </div>
           @endforeach
        </div>
-       <div id="popup" class="popup rounded-lg bg-white p-8 w-1/4 shadow-2xl absolute top-40 left-0 right-0 mx-auto hidden">
-           <h2 class="text-lg font-bold">Product added to cart!</h2>
-           <p class="mt-2 text-sm text-gray-500">
-              You have successfully added the product to your cart.
-           </p>
-           <div class="mt-4 flex gap-2">
-              <button type="button" class="rounded bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-100">
-                 Go to Cart
-              </button>
-              <button type="button" class="rounded bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-slate-100" id="close-popup-btn">
-                 Continue Shopping
-              </button>
-           </div>
+       <div id="popup" class="popup border-2 border-grey-900 rounded-lg bg-white p-8 w-1/4 shadow-xl absolute top-40 left-0 right-0 mx-auto hidden">
+        <h2 class="text-lg font-bold text-gray-900">Confirm Your Purchase</h2>
+        <p class="mt-2 text-sm text-gray-500">
+            Are you sure you want to confirm your purchase?
+        </p>
+        <div class="mt-4 flex gap-2">
+            <button type="button" class="rounded bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-100">
+                Yes, Confirm
+            </button>
+            <button type="button" class="rounded bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-slate-100" id="close-popup-btn">
+                No, Continue Shopping
+            </button>
         </div>
+    </div>    
     </section>
 
     <section class="max-w-screen-xl mx-auto my-8 p-4 bg-gray-900 text-white rounded-lg">
@@ -68,9 +68,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">Advanced Technology</h2>
+                       <h2 class="text-lg font-bold">{{$product -> judul_1}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                           Our product is equipped with the latest technology to ensure high performance and reliability in all conditions.
+                        {{$product -> desc_1}}
                        </p>
                    </div>
                </div>
@@ -84,9 +84,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">Superior Quality</h2>
+                       <h2 class="text-lg font-bold">{{$product -> judul_2}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                           We use only the highest quality materials to ensure durability and longevity of our product.
+                        {{$product -> desc_2}}
                        </p>
                    </div>
                </div>
@@ -100,9 +100,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">Customer Satisfaction</h2>
+                       <h2 class="text-lg font-bold">{{$product -> judul_3}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                           Our top priority is ensuring our customers are completely satisfied with their purchase.
+                        {{$product -> desc_3}}
                        </p>
                    </div>
                </div>
@@ -116,9 +116,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">Eco-Friendly</h2>
+                       <h2 class="text-lg font-bold">{{$product -> judul_4}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                           Our product is designed with sustainability in mind, using eco-friendly materials and processes.
+                        {{$product -> desc_4}}
                        </p>
                    </div>
                </div>
@@ -132,9 +132,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">Affordable Pricing</h2>
+                       <h2 class="text-lg font-bold">{{$product -> judul_5}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                           We offer competitive pricing without compromising on quality, ensuring you get the best value for your money.
+                        {{$product -> desc_5}}
                        </p>
                    </div>
                </div>
@@ -148,67 +148,15 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">Excellent Support</h2>
+                       <h2 class="text-lg font-bold">{{$product -> judul_6}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                           Our dedicated support team is available 24/7 to assist you with any questions or issues you may have.
+                        {{$product -> desc_6}}
                        </p>
                    </div>
                </div>
            </div>
        </div>
    </section>    
-
-    <section class="max-w-screen-xl mx-auto my-8 p-8 bg-gray-900 text-white rounded-lg ">
-       <div class="space-y-4">
-           <details class="group border-s-4 border-grey-50 p-6 rounded-lg [&_summary::-webkit-details-marker]:hidden" open>
-               <summary class="flex cursor-pointer items-center justify-between gap-1.5">
-                   <h2 class="text-lg font-medium text-white">
-                       Product Features and Specifications
-                   </h2>
-                   <span class="shrink-0 rounded-full bg-gray-900 text-white p-1.5 sm:p-3">
-                       <svg xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20" fill="currentColor">
-                           <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
-                       </svg>
-                   </span>
-               </summary>
-               <p class="mt-4 leading-relaxed text-white">
-                   This product is designed with the latest technology, ensuring high performance and reliability. It includes various features such as high-speed connectivity, long-lasting battery life, and a sleek, modern design. The specifications are tailored to meet the needs of both professionals and casual users, offering a versatile and efficient solution for everyday use.
-               </p>
-           </details>
-   
-           <details class="group border-s-4 border-grey-50 p-6 rounded-lg [&_summary::-webkit-details-marker]:hidden">
-               <summary class="flex cursor-pointer items-center justify-between gap-1.5">
-                   <h2 class="text-lg font-medium text-white">
-                       Customer Reviews and Feedback
-                   </h2>
-                   <span class="shrink-0 rounded-full bg-gray-900 text-white p-1.5 sm:p-3">
-                       <svg xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20" fill="currentColor">
-                           <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
-                       </svg>
-                   </span>
-               </summary>
-               <p class="mt-4 leading-relaxed text-white">
-                   Our customers love this product! It has received numerous positive reviews for its performance, durability, and stylish design. Many users have praised its ease of use and the value it provides for its price. We always welcome feedback from our customers to continuously improve and deliver the best products in the market.
-               </p>
-           </details>
-   
-           <details class="group border-s-4 border-grey-50 p-6 rounded-lg [&_summary::-webkit-details-marker]:hidden">
-               <summary class="flex cursor-pointer items-center justify-between gap-1.5">
-                   <h2 class="text-lg font-medium text-white">
-                       Warranty and Support Information
-                   </h2>
-                   <span class="shrink-0 rounded-full bg-gray-900 text-white p-1.5 sm:p-3">
-                       <svg xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20" fill="currentColor">
-                           <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a 1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a 1 1 0 011-1z" clip-rule="evenodd" />
-                       </svg>
-                   </span>
-               </summary>
-               <p class="mt-4 leading-relaxed text-white">
-                   We stand behind the quality of our products and offer a comprehensive warranty to ensure your satisfaction. This product comes with a one-year warranty that covers any manufacturing defects. Additionally, our customer support team is available 24/7 to assist you with any questions or issues you may encounter. Your satisfaction is our top priority.
-               </p>
-           </details>
-       </div>
-   </section> 
     
     @include('components.footer')
    </body>
