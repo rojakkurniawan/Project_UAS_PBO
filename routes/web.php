@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -18,6 +19,7 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index']);
+    Route::get('/address', [AddressController::class, 'index']);
     Route::get('/product/{id}', [ProductController::class, 'show']);
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });
