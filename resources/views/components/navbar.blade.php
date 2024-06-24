@@ -1,3 +1,10 @@
+<style>
+  :root{
+    background-color: white;
+    color: white;
+  }
+</style>
+
 <header class="bg-white">
    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
      <div class="flex lg:flex-1">
@@ -15,9 +22,9 @@
        </button>
      </div>
      <div class="hidden lg:flex lg:gap-x-12">
-       <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+       <a href="/home" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-       <a href="#" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+       <a href="/about" class="text-sm font-semibold leading-6 text-gray-900">About</a>
      </div>
      <div class="flex flex-1 justify-end px-2">
        <div class="flex items-stretch">
@@ -28,7 +35,7 @@
              </div>
            </div>
          </a>
-         <form action=" {{ route('logout') }}" method="POST"> @csrf @method('DELETE') <button type="submit" class="btn btn-neutral rounded-btn">Logout<span aria-hidden="true">&rarr;</span></button>
+         <form action=" {{ route('logout') }}" method="POST"> @csrf @method('DELETE') <button type="submit" class="btn btn-neutral rounded-btn text-white">Logout<span aria-hidden="true">&rarr;</span></button>
          </form>
        </div>
      </div>
