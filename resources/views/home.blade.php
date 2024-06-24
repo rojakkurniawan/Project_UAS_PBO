@@ -141,78 +141,23 @@
             </div>
             <div class="h-full rounded-lg mt-5 lg:col-span-2 lg:mx-5">
                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                  
+                  @foreach($product as $product)
                   <div class="card block rounded-xl bg-white shadow-md dark:bg-neutral-700 hover:scale-105 text-center" data-url="/about">
                      <a href="#!">
-                        <img class="rounded-t-xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
+                        <img class="rounded-t-xl" src="{{$product -> url_image_product}}" alt="{{$product -> name_product}}" />
                      </a>
                      <div class="p-6 cursor-pointer">
-                        <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">Explore the hidden beauty</h5>
+                        <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">{{$product -> name_product}}</h5>
                         <p class="mb-2 text-base text-neutral-500 dark:text-neutral-300">
-                           Explore the captivating beauty of Antelope Canyon's red sandstone formations and intricate play of light and
-                           shadows.
+                           {{$product -> description_product}}
+                        </p>
+                        <p class="mb-2 text-base text-neutral-500 dark:text-neutral-300 font-bold">
+                           Price: Rp {{ number_format($product->price_product, 0, ',', '.') }}
                         </p>
                      </div>
                   </div>
-                  <div class="card block rounded-xl bg-white shadow-md dark:bg-neutral-700 hover:scale-105 text-center" data-url="/about">
-                     <a href="#!">
-                        <img class="rounded-t-xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
-                     </a>
-                     <div class="p-6 cursor-pointer">
-                        <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">Explore the hidden beauty</h5>
-                        <p class="mb-2 text-base text-neutral-500 dark:text-neutral-300">
-                           Explore the captivating beauty of Antelope Canyon's red sandstone formations and intricate play of light and
-                           shadows.
-                        </p>
-                     </div>
-                  </div>
-                  <div class="card block rounded-xl bg-white shadow-md dark:bg-neutral-700 hover:scale-105 text-center" data-url="/about">
-                     <a href="#!">
-                        <img class="rounded-t-xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
-                     </a>
-                     <div class="p-6 cursor-pointer">
-                        <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">Explore the hidden beauty</h5>
-                        <p class="mb-2 text-base text-neutral-500 dark:text-neutral-300">
-                           Explore the captivating beauty of Antelope Canyon's red sandstone formations and intricate play of light and
-                           shadows.
-                        </p>
-                     </div>
-                  </div>
-                  <div class="card block rounded-xl bg-white shadow-md dark:bg-neutral-700 hover:scale-105 text-center" data-url="/about">
-                     <a href="#!">
-                        <img class="rounded-t-xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
-                     </a>
-                     <div class="p-6 cursor-pointer">
-                        <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">Explore the hidden beauty</h5>
-                        <p class="mb-2 text-base text-neutral-500 dark:text-neutral-300">
-                           Explore the captivating beauty of Antelope Canyon's red sandstone formations and intricate play of light and
-                           shadows.
-                        </p>
-                     </div>
-                  </div>
-                  <div class="card block rounded-xl bg-white shadow-md dark:bg-neutral-700 hover:scale-105 text-center" data-url="/about">
-                     <a href="#!">
-                        <img class="rounded-t-xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
-                     </a>
-                     <div class="p-6 cursor-pointer">
-                        <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">Explore the hidden beauty</h5>
-                        <p class="mb-2 text-base text-neutral-500 dark:text-neutral-300">
-                           Explore the captivating beauty of Antelope Canyon's red sandstone formations and intricate play of light and
-                           shadows.
-                        </p>
-                     </div>
-                  </div>
-                  <div class="card block rounded-xl bg-white shadow-md dark:bg-neutral-700 hover:scale-105 text-center" data-url="/about">
-                     <a href="#!">
-                        <img class="rounded-t-xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
-                     </a>
-                     <div class="p-6 cursor-pointer">
-                        <h5 class="mb-2 text-xl font-bold tracking-wide text-neutral-800 dark:text-neutral-50">Explore the hidden beauty</h5>
-                        <p class="mb-2 text-base text-neutral-500 dark:text-neutral-300">
-                           Explore the captivating beauty of Antelope Canyon's red sandstone formations and intricate play of light and
-                           shadows.
-                        </p>
-                     </div>
-                  </div>
+                  @endforeach
                </div>
             </div>
          </div>
