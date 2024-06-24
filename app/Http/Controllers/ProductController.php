@@ -17,6 +17,6 @@ class ProductController extends Controller
     {
         $product = Product::where('id_product', $id)->get();
 
-        return view('about', compact('product'));
+        return view('product', compact('product'));
     }
 }

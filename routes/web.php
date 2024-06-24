@@ -18,6 +18,6 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index']);
-    Route::get('/about/{id}', [ProductController::class, 'show']);
+    Route::get('/product/{id}', [ProductController::class, 'show']);
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });

@@ -143,7 +143,7 @@
                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
                   
                   @foreach($product as $product)
-                  <div class="card block rounded-xl bg-white shadow-md dark:bg-neutral-700 hover:scale-105 text-center" data-url="/about/{{$product -> id_product}}">
+                  <div class="card block rounded-xl bg-white shadow-md dark:bg-neutral-700 hover:scale-105 text-center" data-url="/product/{{$product -> id_product}}">
                      <a href="#!">
                         <img class="rounded-t-xl" src="{{$product -> url_image_product}}" alt="{{$product -> name_product}}" />
                      </a>
