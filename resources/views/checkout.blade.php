@@ -172,7 +172,7 @@
               
                           <div class="flex justify-end">
                             <a
-                              href="#"
+                              href="/confirm"
                               class="block rounded bg-indigo-600 px-5 py-3 text-sm text-gray-100 transition hover:bg-indigo-900"
                             >
                               Checkout
