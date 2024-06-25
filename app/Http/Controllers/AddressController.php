@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -10,21 +12,15 @@ class AddressController extends Controller
     public function index()
     {
         $user = Auth::user();
-
         $userId = $user->id;
 
         $addresses = DB::table('address')
             ->where('id', $userId)
             ->get();
 
-        if ($addresses->isEmpty()) {
-            $addresses = null;
-        } else {
-            return redirect()->route('confirm');
-        }
+        $there_has_address = $addresses->isEmpty() ? 0 : 1;
 
-        // Mengirim data ke view
-        return view('address', compact('addresses'));
+        return view('address', compact('addresses', 'there_has_address'));
     }
 
     public function store(Request $request)
@@ -35,21 +31,21 @@ class AddressController extends Controller
             'address' => 'required|string|max:255',
             'city' => 'required|string|max:255',
             'provincy' => 'required|string|max:255',
-            'postal-code' => 'required|string|max:10',
+            'postal_code' => 'required|string|max:10',
             'country' => 'required|string|max:255',
         ]);
 
         $address = new Address();
-        $address->user_id = Auth::id();
+        $address->id = Auth::id();
         $address->name = $request->input('name');
         $address->phone = $request->input('phone');
         $address->address = $request->input('address');
         $address->city = $request->input('city');
         $address->provincy = $request->input('provincy');
-        $address->postal_code = $request->input('postal-code');
+        $address->postal_code = $request->input('postal_code');
         $address->country = $request->input('country');
         $address->save();
 
-        return redirect()->route('home')->with('success', 'Address has been entered');
+        return response()->json(['message' => 'Alamat sudah dimasukkan.']);
     }
 }

@@ -63,56 +63,64 @@
         </p>
       </div>
 
-    <div id="address-form" class="flex justify-center items-center mt-10" style="margin-bottom: -20px;">
-    <div class="container mx-auto px-4 py-8 bg-gray-900 shadow-md rounded-lg max-w-[850px]">
-        <button class="btn bg-white text-gray-900 hover:text-white hover:bg-indigo-600" onclick="my_modal_4.showModal()">Input Address</button>
-        <dialog id="my_modal_4" class="modal">
-        <div class="bg-white modal-box w-5/12 max-w-5xl">
-            <h3 class="text-lg font-bold text-gray-900">Silahkan masukan alamat anda!</h3>
-            {{-- <p class="py-4 text-lime-400">Click the button below to close</p> --}}
-            <div class="flex flex-col mt-5">
-                <label for="namaPenerima" class="text-sm font-medium text-gray-700">Nama Penerima</label>
-                <input type="namaPenerima" id="namaPenerima" name="namaPenerima" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
-            </div>
-            <div class="flex flex-col mt-5">
-                <label for="namaPenerima" class="text-sm font-medium text-gray-700">No Telepon</label>
-                <input type="namaPenerima" id="namaPenerima" name="namaPenerima" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
-            </div>
-            <div class="flex flex-col mt-5">
-                <label for="namaPenerima" class="text-sm font-medium text-gray-700">Alamat</label>
-                <input type="namaPenerima" id="namaPenerima" name="namaPenerima" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
-            </div>
-            <div class="flex flex-col mt-5">
-                <label for="namaPenerima" class="text-sm font-medium text-gray-700">Kecamatan</label>
-                <input type="namaPenerima" id="namaPenerima" name="namaPenerima" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
-            </div>
-            <div class="flex flex-col mt-5">
-                <label for="namaPenerima" class="text-sm font-medium text-gray-700">Kota</label>
-                <input type="namaPenerima" id="namaPenerima" name="namaPenerima" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
-            </div>
-            <div class="flex flex-col mt-5">
-                <label for="namaPenerima" class="text-sm font-medium text-gray-700">Provinsi</label>
-                <input type="namaPenerima" id="namaPenerima" name="namaPenerima" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
-            </div>
-            <div class="flex flex-col mt-5">
-                <label for="namaPenerima" class="text-sm font-medium text-gray-700">Kode Pos</label>
-                <input type="namaPenerima" id="namaPenerima" name="namaPenerima" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
-            </div>
-            <div class="modal-action">
-            <form method="dialog">
-                <!-- if there is a button, it will close the modal -->
-                <button class="btn text-white">Kembali</button>
-            </form>
-            <form method="dialog">
-                <!-- if there is a button, it will close the modal -->
-                <button class="btn text-white">Simpan</button>
-            </form>
-            </div>
+      
+      <div id="address-form" class="flex justify-center items-center mt-10 drop-shadow-2xl" style="margin-bottom: -20px;">
+        <div class="container mx-auto px-4 py-8 bg-gray-900 shadow-md rounded-lg max-w-[850px]">
+            @if($there_has_address == 0)
+            <h3 class="text-lg font-bold text-white mb-4">It looks like you haven't entered your address, please enter it first!</h3>
+            <button class="btn bg-white text-gray-900 hover:text-white hover:bg-indigo-600" onclick="my_modal_4.showModal()">Input Address</button>
+            <dialog id="my_modal_4" class="modal">
+                <div class="bg-white modal-box w-5/12 max-w-5xl">
+                    <h3 class="text-lg font-bold text-gray-900">Fill your address!</h3>
+                    <form id="address-form-save" method="POST">
+                        @csrf
+                        <div class="flex flex-col mt-5">
+                            <label for="name" class="text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
+                        </div>
+                        <div class="flex flex-col mt-5">
+                            <label for="phone" class="text-sm font-medium text-gray-700">Phone</label>
+                            <input type="text" id="phone" name="phone" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
+                        </div>
+                        <div class="flex flex-col mt-5">
+                            <label for="address" class="text-sm font-medium text-gray-700">Address</label>
+                            <input type="text" id="address" name="address" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
+                        </div>
+                        <div class="flex flex-col mt-5">
+                            <label for="city" class="text-sm font-medium text-gray-700">City</label>
+                            <input type="text" id="city" name="city" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
+                        </div>
+                        <div class="flex flex-col mt-5">
+                            <label for="provincy" class="text-sm font-medium text-gray-700">Provincy</label>
+                            <input type="text" id="provincy" name="provincy" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
+                        </div>
+                        <div class="flex flex-col mt-5">
+                            <label for="country" class="text-sm font-medium text-gray-700">Country</label>
+                            <input type="text" id="country" name="country" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
+                        </div>
+                        <div class="flex flex-col mt-5">
+                            <label for="postal_code" class="text-sm font-medium text-gray-700">Postal Code</label>
+                            <input type="text" id="postal_code" name="postal_code" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
+                        </div>
+                        <div class="modal-action">
+                            <button type="button" class="btn text-white" onclick="my_modal_4.close()">Close</button>
+                            <button type="button" class="btn bg-indigo-600 text-white hover:bg-indigo-900" onclick="saveAddress()">Save</button>
+                        </div>
+                    </form>
+                    <div id="notification" class="hidden bg-green-500 text-white p-4 rounded mt-4"></div>
+                </div>
+            </dialog>
+            @else
+            @foreach ($addresses as $address)
+            <h3 class="text-lg font-bold text-white mb-4">It looks like you have entered your address, lets go buy!</h3>
+            <p class="text-medium text-white">{{$address -> name}} | {{$address -> phone}}</p>
+            <p class="text-medium text-white">{{$address -> address}}, {{$address -> postal_code}}</p>
+            <p class="text-medium text-white">{{$address -> city}}, {{$address -> provincy}}, {{$address -> country}}</p>
+            @endforeach
+            @endif
         </div>
-        </dialog>
     </div>
-    </div>
-
+    
     <div class="flex items-center justify-center p-12 drop-shadow-2xl">
         <div class="mx-auto w-full max-w-[850px] bg-gray-900 p-8 rounded-lg text-white">
             <form>
@@ -180,6 +188,29 @@
     </div>
     @include('components.footer')
     <script>
+        function saveAddress() {
+            var form = document.getElementById('address-form-save');
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '{{ route('address.store') }}', true);
+            xhr.setRequestHeader('X-CSRF-TOKEN', '{{ csrf_token() }}');
+    
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.getElementById('notification').innerText = 'Alamat sudah dimasukkan.';
+                    document.getElementById('notification').classList.remove('hidden');
+                    setTimeout(function() {
+                        document.getElementById('notification').classList.add('hidden');
+                        my_modal_4.close();
+                    }, 3000);
+                    window.location.reload();
+                } else {
+                    console.error('Error saving address.');
+                }
+            };
+    
+            xhr.send(formData);
+        }
         document.querySelectorAll('.card').forEach(card => {
             card.addEventListener('click', () => {
                 window.location.href = card.getAttribute('data-url');
