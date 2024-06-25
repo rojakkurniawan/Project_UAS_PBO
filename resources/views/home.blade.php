@@ -114,7 +114,7 @@
          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
             @foreach($products as $product)
             <div class="card block rounded-xl shadow-md bg-gray-900 hover:scale-105 text-center" data-url="/product/{{$product -> id_product}}">
-               <a href="">
+               <a href="product/{{$product -> id_product}}">
                   <img class="rounded-t-xl" src="{{$product -> url_image_product}}" alt="{{$product -> name_product}}" />
                </a>
                <div class="p-6 cursor-pointer">
