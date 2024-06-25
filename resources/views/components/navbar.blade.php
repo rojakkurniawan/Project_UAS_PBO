@@ -10,7 +10,7 @@
      <div class="flex lg:flex-1">
        <a href="/home" class="-m-1.5 p-1.5">
          <span class="sr-only">Your Company</span>
-         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+         <img class="h-8 w-auto" src="https://i.ibb.co/D8DDFFN/1719337919935.png" alt="">
        </a>
      </div>
      <div class="flex lg:hidden">
@@ -28,9 +28,17 @@
      <div class="flex flex-1 justify-end px-2">
        <div class="flex items-stretch">
          <a href="/profile" class="mr-2">
-           <div class="dropdown avatar">
-             <div class="w-12 rounded-full">
-               <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+           <div class="avatar placeholder">
+             <div class="bg-neutral text-neutral-content w-12 rounded-full">
+              <span><?php
+                $name = Auth::user()->name;
+                $initials = '';
+                $words = explode(' ', $name);
+                foreach ($words as $word) {
+                    $initials .= strtoupper($word[0]);
+                }
+                echo substr($initials, 0, 2);
+              ?></span>
              </div>
            </div>
          </a>
