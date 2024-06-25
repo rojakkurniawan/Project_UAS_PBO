@@ -197,7 +197,7 @@
     
             xhr.onload = function() {
                 if (xhr.status === 200) {
-                    document.getElementById('notification').innerText = 'Alamat sudah dimasukkan.';
+                    document.getElementById('notification').innerText = 'Alamat has been registered.';
                     document.getElementById('notification').classList.remove('hidden');
                     setTimeout(function() {
                         document.getElementById('notification').classList.add('hidden');
