@@ -23,6 +23,25 @@ class CheckOutController extends Controller
         return view('checkout', compact('addresses', 'there_has_address'));
     }
 
+    public function show(Request $request)
+    {
+        $productName = $request->query('name');
+        $productDescription = $request->query('description');
+        $productUrlImage = $request->query('url_image');
+        $productPrice = $request->query('price');
+
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $addresses = DB::table('address')
+            ->where('id', $userId)
+            ->get();
+
+        $there_has_address = $addresses->isEmpty() ? 0 : 1;
+
+        return view('checkout', compact('productName', 'productDescription', 'productUrlImage', 'productPrice', 'addresses', 'there_has_address'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([

@@ -22,31 +22,36 @@
      </div>
      
      <section class="max-w-screen-xl mx-auto my-4 p-4">
-       <div class="bg-gray-900 p-10 rounded-lg shadow-lg flex">
-           @foreach($product as $product)
-          <img src="{{$product -> url_image_product}}" alt="Product Image" class="w-1/3 h-auto rounded mr-8">
-          <div class="w-2/3">
-             <h2 class="text-lg font-semibold mb-2">{{$product -> name_product}}</h2>
-             <p class="text-neutral-300 mb-4">{{$product -> description_product}}</p>
-             <p class="text-xl text-white font-semibold mb-6">Rp {{ number_format($product->price_product, 0, ',', '.') }}</p>
-             <button class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700" id="add-to-cart-btn">Buy Now!</button>
-          </div>
-          @endforeach
-       </div>
-       <div id="popup" class="popup border-2 border-grey-900 rounded-lg bg-white p-8 w-1/4 shadow-xl absolute top-40 left-0 right-0 mx-auto hidden">
-        <h2 class="text-lg font-bold text-gray-900">Confirm Your Purchase</h2>
-        <p class="mt-2 text-sm text-gray-500">
-            Are you sure you want to confirm your purchase?
-        </p>
-        <div class="mt-4 flex gap-2">
-            <button type="button" class="rounded bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-100">
-                Yes, Confirm
-            </button>
-            <button type="button" class="rounded bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-slate-100" id="close-popup-btn">
-                No, Continue Shopping
-            </button>
+        <div class="bg-gray-900 p-10 rounded-lg shadow-lg flex">
+            @foreach($product as $product)
+            <img src="{{$product->url_image_product}}" alt="Product Image" class="w-1/3 h-auto rounded mr-8">
+            <div class="w-2/3">
+                <h2 class="text-lg font-semibold mb-2">{{$product->name_product}}</h2>
+                <p class="text-neutral-300 mb-4">{{$product->description_product}}</p>
+                <p class="text-xl text-white font-semibold mb-6">Rp {{ number_format($product->price_product, 0, ',', '.') }}</p>
+                <button class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700" 
+                        id="add-to-cart-btn" 
+                        data-url-image ="{{$product->url_image_product}}"
+                        data-name="{{$product->name_product}}" 
+                        data-description="{{$product->description_product}}" 
+                        data-price="{{$product->price_product}}">Buy Now!</button>
+            </div>
+            @endforeach
         </div>
-    </div>    
+        <div id="popup" class="popup border-2 border-grey-900 rounded-lg bg-white p-8 w-1/4 shadow-xl absolute top-40 left-0 right-0 mx-auto hidden">
+            <h2 class="text-lg font-bold text-gray-900">Confirm Your Purchase</h2>
+            <p class="mt-2 text-sm text-gray-500">
+                Are you sure you want to confirm your purchase?
+            </p>
+            <div class="mt-4 flex gap-2">
+                <button type="button" class="rounded bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-100" id="confirm-purchase-btn">
+                    Yes, Confirm
+                </button>
+                <button type="button" class="rounded bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-slate-100" id="close-popup-btn">
+                    No, Continue Shopping
+                </button>
+            </div>
+        </div>    
     </section>
 
     <section class="max-w-screen-xl mx-auto my-8 p-4 bg-gray-900 text-white rounded-lg">
@@ -161,7 +166,7 @@
     @include('components.footer')
    </body>
    <script>
-      document.querySelectorAll('.card').forEach(card => {
+    document.querySelectorAll('.card').forEach(card => {
           card.addEventListener('click', () => {
               window.location.href = card.getAttribute('data-url');
           });
@@ -171,6 +176,21 @@
     });
     document.getElementById('close-popup-btn').addEventListener('click', function() {
        document.getElementById('popup').classList.add('hidden');
+    });
+
+    document.getElementById('confirm-purchase-btn').addEventListener('click', function() {
+        const productName = document.getElementById('add-to-cart-btn').getAttribute('data-name');
+        const productDescription = document.getElementById('add-to-cart-btn').getAttribute('data-description');
+        const urlImage = document.getElementById('add-to-cart-btn').getAttribute('data-url-image');
+        const productPrice = document.getElementById('add-to-cart-btn').getAttribute('data-price');
+        
+        const url = new URL(window.location.origin + '/checkout');
+        url.searchParams.set('name', productName);
+        url.searchParams.set('url_image', urlImage);
+        url.searchParams.set('description', productDescription);
+        url.searchParams.set('price', productPrice);
+
+        window.location.href = url.toString();
     });
  </script>
 </html>

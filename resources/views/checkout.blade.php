@@ -45,12 +45,12 @@
               <span class="text-white">for your enthusiastic</span> 
               <span class="text-sky-500"> purchase</span>
             </h1>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Please fill in your address below</p>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Please confirm your purchase below </p>
             <div class="mt-5 flex items-center justify-center gap-x-6">
                 <a href="#address-form"
                    id="fill-now-btn"
                    class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400"
-                   rel="noreferrer">Fill Now →</a>
+                   rel="noreferrer">Confirm Now →</a>
             </div>            
           </div>
         </div>
@@ -134,23 +134,17 @@
                       <ul class="space-y-4">
                         <li class="flex gap-4">
                           <img
-                            src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80"
+                            src="<?php echo htmlspecialchars($_GET['url_image']); ?>"
                             alt=""
                             class="size-32 rounded object-cover"
                           />
               
                           <div>
-                            <h3 class="text-sm text-white">Basic Tee 6-Pack</h3>
+                            <h3 class="text-white font-bold"><?php echo htmlspecialchars($_GET['name']); ?></h3>
               
                             <dl class="mt-0.5 space-y-px text-[10px] text-gray-300">
                               <div>
-                                <dt class="inline">Size:</dt>
-                                <dd class="inline">XXS</dd>
-                              </div>
-              
-                              <div>
-                                <dt class="inline">Color:</dt>
-                                <dd class="inline">White</dd>
+                                <dd class="inline text-sm"><?php echo htmlspecialchars($_GET['description']); ?></dd>
                               </div>
                             </dl>
                           </div>
@@ -162,24 +156,24 @@
                           <dl class="space-y-0.5 text-sm text-white">
                             <div class="flex justify-between">
                               <dt>Subtotal</dt>
-                              <dd>£250</dd>
+                              <dd>Rp. <?php echo htmlspecialchars(number_format((float)$_GET['price'], 2, ',', '.')); ?></dd>
                             </div>
               
                             <div class="flex justify-between">
                               <dt>VAT</dt>
-                              <dd>£25</dd>
+                              <dd>Rp. <?php echo htmlspecialchars(number_format((float)$_GET['price'] * 0.05, 2, ',', '.')); ?></dd>
                             </div>
               
                             <div class="flex justify-between !text-base font-medium">
                               <dt>Total</dt>
-                              <dd>£275</dd>
+                              <dd>Rp. <?php echo htmlspecialchars(number_format((float)$_GET['price'] + (float)$_GET['price']* 0.05, 2, ',', '.')); ?></dd>
                             </div>
                           </dl>
               
                           <div class="flex justify-end">
                             <a
                               href="#"
-                              class="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
+                              class="block rounded bg-indigo-600 px-5 py-3 text-sm text-gray-100 transition hover:bg-indigo-900"
                             >
                               Checkout
                             </a>
