@@ -15,8 +15,8 @@
         <div class="font-sans antialiased h-screen flex items-center justify-center">
             <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl">
                 <div class="w-1/2 p-5 pl-10 ">
-                    <h1 class="text-2xl pb-2 flex align-middle mt-10 pt-10">Login Page</h1>
-                    <p class="text-sm">If you're not member, please register in <a href="/register" class="text-yellow-500">here</a></p>
+                    <h1 class="text-2xl pb-2 flex align-middle mt-10 text-white pt-10">Login Page</h1>
+                    <p class="text-sm text-white ">If you're not member, please register in <a href="/register" class="text-yellow-500">here</a></p>
                     @if(Session::has('error'))
                         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-6" role="alert">
                             {{ Session::get('error') }}
@@ -25,14 +25,14 @@
                     <form action="{{ route('login') }}" method="POST" class="mt-4">
                         @csrf
                         <div class="mb-4">
-                            <label class="block text-sm mb-2" for="email">Email</label>
+                            <label class="block text-sm mb-2 text-white" for="email">Email</label>
                             <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="email" id="email" name="email" placeholder="Enter your email" required>
                         </div>
                         <div class="mb-4">
-                            <label class="block text-sm mb-2" for="password">Password</label>
+                            <label class="block text-sm mb-2 text-white" for="password">Password</label>
                             <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="password" id="password" name="password" placeholder="Enter your password" required>
                         </div>
-                        <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center justify-between mb-4 text-white">
                             <div>
                                 <input class="mr-2" type="checkbox" id="remember_me">
                                 <label class="text-sm" for="remember_me">Remember me</label>

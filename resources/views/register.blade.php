@@ -16,8 +16,8 @@
             <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl ">
 
                 <div class="w-1/2 p-5 pl-10 ">
-                    <h1 class="text-2xl pb-2 flex align-middle">Register Page</h1>
-                    <p class="text-sm">If you're already a member, please log in <a href="/login" class="text-yellow-500">here</a></p>
+                    <h1 class="text-2xl pb-2 flex align-middle text-white">Register Page</h1>
+                    <p class="text-sm text-white">If you're already a member, please log in <a href="/login" class="text-yellow-500">here</a></p>
                     @if(Session::has('success'))
                         <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50  mt-6" role="alert">
                             {{ Session::get('success') }}
@@ -26,15 +26,15 @@
                     <form action="{{ route('register') }}" method="POST" class="mt-4">
                         @csrf
                         <div class="mb-4">
-                            <label class="block text-sm mb-2" for="name">Name</label>
+                            <label class="block text-sm mb-2 text-white" for="name">Name</label>
                             <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="text" id="name" name="name" placeholder="Enter your fullname" required>
                         </div>
                         <div class="mb-4">
-                            <label class="block text-sm mb-2" for="email">Email</label>
+                            <label class="block text-sm mb-2 text-white" for="email">Email</label>
                             <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="email" id="email" name="email" placeholder="Enter your email" required>
                         </div>
                         <div class="mb-4">
-                            <label class="block text-sm mb-2" for="password">Password</label>
+                            <label class="block text-sm mb-2 text-white " for="password">Password</label>
                             <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="password" id="password" name="password" placeholder="Enter your password" required>
                         </div>
                         <div class="flex items-center justify-between mb-4">
