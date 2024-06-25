@@ -18,18 +18,15 @@
       <div class="mx-auto max-w-screen-xl px-4 lg:flex py-32 lg:items-center">
          <div class="mx-auto max-w-3xl text-center">
             <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
-               Hyper Store
-               <span class="sm:block"> Increase Conversion. </span>
+               FutureTech Store
+               <span class="sm:block"> Unleash Innovation. </span>
             </h1>
-            <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
-               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!
-            </p>
+               <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+                  Discover the latest gadgets of your dreams for a smarter and more productive life.
+               </p>
             <div class="mt-8 flex flex-wrap justify-center gap-4">
-               <a class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
-               Get Started
-               </a>
-               <a class="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto" href="#">
-               Learn More
+               <a href="#product-id" id="find-btn" class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
+               Find your dream gadget now!
                </a>
             </div>
          </div>
@@ -91,7 +88,7 @@
                </summary>
                <div class="border-t border-gray-200 bg-white">
                   <header class="flex items-center justify-between p-4">
-                     <span class="text-sm text-gray-700">The highest price is $600</span>
+                     <span class="text-sm text-gray-700">The highest price is Rp. 19.999.999</span>
                      <button type="button" class="text-sm text-gray-900 underline underline-offset-4">Reset</button>
                   </header>
                   <div class="border-t border-gray-200 p-4">
@@ -110,7 +107,7 @@
             </details>
          </div>
       </div>
-      <div class="h-full rounded-lg mt-5 lg:col-span-2 lg:mx-5">
+      <div id="product-id" class="h-full rounded-lg mt-5 lg:col-span-2 lg:mx-5">
          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
             @foreach($products as $product)
             <div class="card block rounded-xl shadow-md bg-gray-900 hover:scale-105 text-center" data-url="/product/{{$product -> id_product}}">
@@ -149,6 +146,10 @@
           card.addEventListener('click', () => {
               window.location.href = card.getAttribute('data-url');
           });
+      });
+      document.getElementById('find-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('product-id').scrollIntoView({ behavior: 'smooth' });
       });
   </script>
 </html>

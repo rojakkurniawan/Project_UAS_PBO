@@ -19,13 +19,12 @@
           href="#"
           class="block text-2xl font-medium  hover:opacity-75 sm:text-3xl text-white"
           >
-          0123456789
+          +62 123 456 789
           </a>
       </p>
 
       <ul class="mt-8 space-y-1 text-sm text-white">
-          <li>Monday to Friday: 10am - 5pm</li>
-          <li>Weekend: 10am - 3pm</li>
+          <li>Open 24 Hours</li>
       </ul>
 
       <ul class="mt-8 flex gap-6">
@@ -125,65 +124,53 @@
       </div>
 
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      <div>
-          <p class="font-medium text-white">Services</p>
-
-          <ul class="mt-6 space-y-4 text-sm">
-          <li>
-              <a href="#" class="transition hover:opacity-75 text-white">
-              1on1 Coaching
-              </a>
-          </li>
-
-          <li>
-              <a href="#" class="transition hover:opacity-75 text-white">
-              Company Review
-              </a>
-          </li>
-
-          <li>
-              <a href="#" class="transition hover:opacity-75 text-white">
-              Accounts Review
-              </a>
-          </li>
-
-          <li>
-              <a href="#" class="transition hover:opacity-75 text-white">
-              HR Consulting
-              </a>
-          </li>
-
-          <li>
-              <a href="#" class=" transition hover:opacity-75 text-white">
-              SEO Optimisation
-              </a>
-          </li>
-          </ul>
-      </div>
-
-      <div>
-          <p class="font-medium text-white">Company</p>
-
-          <ul class="mt-6 space-y-4 text-sm">
-          <li>
-              <a href="#" class=" transition hover:opacity-75 text-white">
-              About
-              </a>
-          </li>
-
-          <li>
-              <a href="#" class=" transition hover:opacity-75 text-white">
-              Meet the Team
-              </a>
-          </li>
-
-          <li>
-              <a href="#" class="transition hover:opacity-75 text-white">
-              Accounts Review
-              </a>
-          </li>
-          </ul>
-      </div>
+        <div>
+            <p class="font-medium text-white">Services</p>
+  
+            <ul class="mt-6 space-y-4 text-sm">
+            <li>
+                <a href="#" class="transition hover:opacity-75 text-white">
+                Product Advice
+                </a>
+            </li>
+  
+            <li>
+                <a href="#" class="transition hover:opacity-75 text-white">
+                Product Reviews
+                </a>
+            </li>
+  
+            <li>
+                <a href="#" class="transition hover:opacity-75 text-white">
+                Accounts Setup
+                </a>
+            </li>
+            </ul>
+        </div>
+  
+        <div>
+            <p class="font-medium text-white">Company</p>
+  
+            <ul class="mt-6 space-y-4 text-sm">
+            <li>
+                <a href="#" class=" transition hover:opacity-75 text-white">
+                About Us
+                </a>
+            </li>
+  
+            <li>
+                <a href="#" class=" transition hover:opacity-75 text-white">
+                Our Team
+                </a>
+            </li>
+  
+            <li>
+                <a href="#" class="transition hover:opacity-75 text-white">
+                Customer Reviews
+                </a>
+            </li>
+            </ul>
+        </div>
       </div>
   </div>
 
@@ -210,7 +197,7 @@
       </ul>
 
       <p class="mt-8 text-xs sm:mt-0 text-gray-400">
-          &copy; 2022. Company Name. All rights reserved.
+          &copy; 2024. FutureTech Store. All rights reserved.
       </p>
       </div>
   </div>
