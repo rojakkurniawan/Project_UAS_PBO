@@ -112,9 +112,9 @@
       </div>
       <div class="h-full rounded-lg mt-5 lg:col-span-2 lg:mx-5">
          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-            @foreach($product as $product)
+            @foreach($products as $product)
             <div class="card block rounded-xl shadow-md bg-gray-900 hover:scale-105 text-center" data-url="/product/{{$product -> id_product}}">
-               <a href="#!">
+               <a href="">
                   <img class="rounded-t-xl" src="{{$product -> url_image_product}}" alt="{{$product -> name_product}}" />
                </a>
                <div class="p-6 cursor-pointer">
@@ -128,6 +128,16 @@
                </div>
             </div>
             @endforeach
+         </div>
+         <div class="flex justify-center mt-5">
+            <div class="join grid grid-cols-3">
+
+               @foreach (range(1, $products->lastPage()) as $page )
+               <a href="{{ $products->url($page) }}" class="join-item btn{{ $products->currentPage() == $page ? 'join-item btn btn-active' : '' }}">
+                  {{ $page }}
+               </a>
+               @endforeach
+             </div>
          </div>
       </div>
    </div>

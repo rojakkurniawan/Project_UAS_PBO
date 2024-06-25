@@ -11,15 +11,15 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         @vite('resources/css/app.css')
     </head>
-    <body class="font-sans antialiased h-screen dark:bg-black dark:text-white/50 flex items-center justify-center">
-        <div class="font-sans antialiased h-screen dark:bg-black dark:text-white/50 flex items-center justify-center">
+    <body class="font-sans antialiased h-screen  flex items-center justify-center">
+        <div class="font-sans antialiased h-screen flex items-center justify-center">
             <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl ">
 
                 <div class="w-1/2 p-5 pl-10 ">
                     <h1 class="text-2xl pb-2 flex align-middle">Register Page</h1>
                     <p class="text-sm">If you're already a member, please log in <a href="/login" class="text-yellow-500">here</a></p>
                     @if(Session::has('success'))
-                        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 mt-6" role="alert">
+                        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50  mt-6" role="alert">
                             {{ Session::get('success') }}
                         </div>
                     @endif

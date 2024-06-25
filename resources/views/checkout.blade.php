@@ -91,8 +91,8 @@
                             <input type="text" id="city" name="city" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
                         </div>
                         <div class="flex flex-col mt-5">
-                            <label for="provincy" class="text-sm font-medium text-gray-700">Provincy</label>
-                            <input type="text" id="provincy" name="provincy" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
+                            <label for="province" class="text-sm font-medium text-gray-700">Province</label>
+                            <input type="text" id="province" name="province" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
                         </div>
                         <div class="flex flex-col mt-5">
                             <label for="country" class="text-sm font-medium text-gray-700">Country</label>
@@ -103,7 +103,7 @@
                             <input type="text" id="postal_code" name="postal_code" class="bg-white text-gray-900 mt-1 px-3 py-2 input input-bordered w-full sm:text-sm">
                         </div>
                         <div class="modal-action">
-                            <button type="button" class="btn text-white" onclick="my_modal_4.close()">Close</button>
+                            <button type="button" class="btn text-white bg-slate-700 hover:text-black" onclick="my_modal_4.close()">Close</button>
                             <button type="button" class="btn bg-indigo-600 text-white hover:bg-indigo-900" onclick="saveAddress()">Save</button>
                         </div>
                     </form>
@@ -115,7 +115,7 @@
             <h3 class="text-lg font-bold text-white mb-4">It looks like you have entered your address, lets go buy!</h3>
             <p class="text-medium text-white">{{$address -> name}} | {{$address -> phone}}</p>
             <p class="text-medium text-white">{{$address -> address}}, {{$address -> postal_code}}</p>
-            <p class="text-medium text-white">{{$address -> city}}, {{$address -> provincy}}, {{$address -> country}}</p>
+            <p class="text-medium text-white">{{$address -> city}}, {{$address -> province}}, {{$address -> country}}</p>
             @endforeach
             @endif
         </div>

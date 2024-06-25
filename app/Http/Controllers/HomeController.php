@@ -8,8 +8,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $product = Product::all();
+        $products = Product::paginate(6);
 
-        return view('home', compact('product'));
+        return view('home', compact('products'));
     }
 }

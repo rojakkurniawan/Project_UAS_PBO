@@ -49,7 +49,7 @@ class CheckOutController extends Controller
             'phone' => 'required|string|max:15',
             'address' => 'required|string|max:255',
             'city' => 'required|string|max:255',
-            'provincy' => 'required|string|max:255',
+            'province' => 'required|string|max:255',
             'postal_code' => 'required|string|max:10',
             'country' => 'required|string|max:255',
         ]);
@@ -60,7 +60,7 @@ class CheckOutController extends Controller
         $address->phone = $request->input('phone');
         $address->address = $request->input('address');
         $address->city = $request->input('city');
-        $address->provincy = $request->input('provincy');
+        $address->province = $request->input('province');
         $address->postal_code = $request->input('postal_code');
         $address->country = $request->input('country');
         $address->save();

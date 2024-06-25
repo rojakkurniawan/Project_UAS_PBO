@@ -12,7 +12,7 @@
         @vite('resources/css/app.css')
     </head>
     <body >
-        <div class="font-sans antialiased h-screen dark:bg-black dark:text-white/50 flex items-center justify-center">
+        <div class="font-sans antialiased h-screen flex items-center justify-center">
             <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl">
                 <div class="w-1/2 p-5 pl-10 ">
                     <h1 class="text-2xl pb-2 flex align-middle mt-10 pt-10">Login Page</h1>

@@ -14,7 +14,7 @@ class Address extends Model
         'phone',
         'address',
         'city',
-        'provincy',
+        'province',
         'country',
         'postal_code',
     ];
