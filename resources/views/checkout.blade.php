@@ -123,67 +123,73 @@
     
     <div class="flex items-center justify-center p-12 drop-shadow-2xl">
         <div class="mx-auto w-full max-w-[850px] bg-gray-900 p-8 rounded-lg text-white">
-            <form>
-                <p class="text-2xl mb-4 font-bold">Your Address</p>
-                <div class="mb-5">
-                    <label for="name" class="mb-3 block text-base font-medium">
-                        Full Name
-                    </label>
-                    <input type="text" name="name" id="name" placeholder="Full Name"
-                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                </div>
-                <div class="mb-3">
-                    <label for="phone" class="mb-3 block text-base font-medium">
-                        Phone Number
-                    </label>
-                    <input type="text" name="phone" id="phone" placeholder="Enter your phone number"
-                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                </div>
-                <div class="mb-5 pt-3">
-                    <label class="mb-5 block text-base font-semibold sm:text-xl">
-                        Address Details
-                    </label>
-                    <div class="-mx-3 flex flex-wrap">
-                        <div class="w-full px-3 sm:w-1/2">
-                            <div class="mb-5">
-                                <input type="text" name="address" id="address" placeholder="Enter area"
-                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            <section>
+                <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+                  <div class="mx-auto max-w-3xl">
+                    <header class="text-center">
+                      <h1 class="text-xl font-bold text-white sm:text-3xl">Your Cart</h1>
+                    </header>
+              
+                    <div class="mt-8">
+                      <ul class="space-y-4">
+                        <li class="flex gap-4">
+                          <img
+                            src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80"
+                            alt=""
+                            class="size-32 rounded object-cover"
+                          />
+              
+                          <div>
+                            <h3 class="text-sm text-white">Basic Tee 6-Pack</h3>
+              
+                            <dl class="mt-0.5 space-y-px text-[10px] text-gray-300">
+                              <div>
+                                <dt class="inline">Size:</dt>
+                                <dd class="inline">XXS</dd>
+                              </div>
+              
+                              <div>
+                                <dt class="inline">Color:</dt>
+                                <dd class="inline">White</dd>
+                              </div>
+                            </dl>
+                          </div>
+                        </li>
+                      </ul>
+              
+                      <div class="mt-8 flex justify-end border-t border-gray-100 pt-8">
+                        <div class="w-screen max-w-lg space-y-4">
+                          <dl class="space-y-0.5 text-sm text-white">
+                            <div class="flex justify-between">
+                              <dt>Subtotal</dt>
+                              <dd>£250</dd>
                             </div>
-                        </div>
-                        <div class="w-full px-3 sm:w-1/2">
-                            <div class="mb-5">
-                                <input type="text" name="city" id="city" placeholder="Enter city"
-                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+              
+                            <div class="flex justify-between">
+                              <dt>VAT</dt>
+                              <dd>£25</dd>
                             </div>
-                        </div>
-                        <div class="w-full px-3 sm:w-1/2">
-                            <div class="mb-5">
-                                <input type="text" name="provincy" id="provincy" placeholder="Enter provincy"
-                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+              
+                            <div class="flex justify-between !text-base font-medium">
+                              <dt>Total</dt>
+                              <dd>£275</dd>
                             </div>
+                          </dl>
+              
+                          <div class="flex justify-end">
+                            <a
+                              href="#"
+                              class="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
+                            >
+                              Checkout
+                            </a>
+                          </div>
                         </div>
-                        <div class="w-full px-3 sm:w-1/2">
-                            <div class="mb-5">
-                                <input type="text" name="postal-code" id="postal-code" placeholder="Post Code"
-                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                            </div>
-                        </div>
-                        <div class="w-full px-3 sm:w-full">
-                            <div class="mb-5">
-                                <input type="text" name="country" id="country" placeholder="Enter country"
-                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                            </div>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-    
-                <div>
-                    <button
-                        class="hover:shadow-form w-full rounded-md bg-indigo-600 py-3 px-8 text-center text-base font-semibold text-white outline-none">
-                        Save Now!
-                    </button>
-                </div>
-            </form>
+              </section>
         </div>
     </div>
     @include('components.footer')
@@ -192,7 +198,7 @@
             var form = document.getElementById('address-form-save');
             var formData = new FormData(form);
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', '{{ route('address.store') }}', true);
+            xhr.open('POST', '{{ route('checkout.store') }}', true);
             xhr.setRequestHeader('X-CSRF-TOKEN', '{{ csrf_token() }}');
     
             xhr.onload = function() {

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class AddressController extends Controller
+class CheckOutController extends Controller
 {
     public function index()
     {
@@ -20,7 +20,7 @@ class AddressController extends Controller
 
         $there_has_address = $addresses->isEmpty() ? 0 : 1;
 
-        return view('address', compact('addresses', 'there_has_address'));
+        return view('checkout', compact('addresses', 'there_has_address'));
     }
 
     public function store(Request $request)
