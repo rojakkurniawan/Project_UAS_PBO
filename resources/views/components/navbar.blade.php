@@ -9,8 +9,8 @@
    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
      <div class="flex lg:flex-1">
        <a href="/home" class="-m-1.5 p-1.5">
-         <span class="sr-only">Your Company</span>
-         <img class="h-8 w-auto" src="https://i.ibb.co/D8DDFFN/1719337919935.png" alt="">
+         <span class="sr-only">FutureTech Store</span>
+         <img class="h-12 w-auto" src="https://i.ibb.co/D8DDFFN/1719337919935.png" alt="">
        </a>
      </div>
      <div class="flex lg:hidden">
@@ -23,13 +23,13 @@
      </div>
      <div class="hidden lg:flex lg:gap-x-12">
        <a href="/home" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-       <a href="#" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+       <a href="/profile" class="text-sm font-semibold leading-6 text-gray-900">Profile</a>
      </div>
      <div class="flex flex-1 justify-end px-2">
        <div class="flex items-stretch">
          <a href="/profile" class="mr-2">
            <div class="avatar placeholder">
-             <div class="bg-neutral text-neutral-content w-12 rounded-full">
+             <div class="bg-neutral w-12 rounded-full">
               <span><?php
                 $name = Auth::user()->name;
                 $initials = '';

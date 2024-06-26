@@ -27,24 +27,19 @@
                         @csrf
                         <div class="mb-4">
                             <label class="block text-sm mb-2 text-white" for="name">Name</label>
-                            <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="text" id="name" name="name" placeholder="Enter your fullname" required>
+                            <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-500" type="text" id="name" name="name" placeholder="Enter your fullname" required>
                         </div>
                         <div class="mb-4">
                             <label class="block text-sm mb-2 text-white" for="email">Email</label>
-                            <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-500" type="email" id="email" name="email" placeholder="Enter your email" required>
                         </div>
                         <div class="mb-4">
                             <label class="block text-sm mb-2 text-white " for="password">Password</label>
-                            <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <input class="w-full px-3 py-2 text-black rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-500" type="password" id="password" name="password" placeholder="Enter your password" required>
                         </div>
                         <div class="flex items-center justify-between mb-4">
                         </div>
                         <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg" type="submit">Register</button>
-                        <div class="text-center text-sm text-gray-400 mb-4 mt-4">Or register with</div>
-                        <button class="w-full bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 py-2 rounded-lg flex items-center justify-center" type="button">
-                            <img class="w-5 h-5 mr-2" src="https://www.svgrepo.com/show/355037/google.svg" alt="Google Logo">
-                            Google
-                        </button>
                     </form>
                 </div>
                 <div class="w-1/2  p-5">
