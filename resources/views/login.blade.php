@@ -12,9 +12,9 @@
     </head>
     <body >
         <div class="font-sans antialiased h-screen flex items-center justify-center">
-            <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl">
-                <div class="w-1/2 p-5 pl-10 ">
-                    <h1 class="text-2xl pb-2 flex align-middle mt-10 text-white pt-10">Login Page</h1>
+            <section class="bg-gray-900 flex flex-col md:flex-row rounded-2xl shadow-lg max-w-3xl w-3/4">
+                <div class="w-full md:w-1/2 pr-5 pl-5 pb-5 md:pt-5 pl-10 ">
+                    <h1 class="text-2xl pb-2 flex align-middle md:mt-10 text-white pt-10">Login Page</h1>
                     <p class="text-sm text-white ">If you're not member, please register in <a href="/register" class="text-yellow-500">here</a></p>
                     @if(Session::has('error'))
                         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-6" role="alert">
@@ -41,7 +41,7 @@
                         <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg" type="submit">Login</button>
                     </form>
                 </div>
-                <div class="w-1/2  p-5">
+                <div class="w-full md:w-1/2 p-5 hidden md:block">
                     <img class="rounded-2xl" src="https://static.vecteezy.com/system/resources/previews/030/316/663/large_2x/cart-in-context-supermarket-shopping-cart-amidst-blurred-store-bokeh-atmosphere-vertical-mobile-wallpaper-ai-generated-free-photo.jpg" alt="">
                 </div>
             </section>

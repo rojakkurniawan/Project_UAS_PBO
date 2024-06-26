@@ -13,9 +13,9 @@
     </head>
     <body class="font-sans antialiased h-screen  flex items-center justify-center">
         <div class="font-sans antialiased h-screen flex items-center justify-center">
-            <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl ">
+            <section class="bg-gray-900 flex rounded-2xl shadow-lg max-w-3xl">
 
-                <div class="w-1/2 p-5 pl-10 ">
+                <div class="w-full md:w-1/2 p-6 md:pl-10">
                     <h1 class="text-2xl pb-2 flex align-middle text-white">Register Page</h1>
                     <p class="text-sm text-white">If you're already a member, please log in <a href="/login" class="text-yellow-500">here</a></p>
                     @if(Session::has('success'))
@@ -42,7 +42,7 @@
                         <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg" type="submit">Register</button>
                     </form>
                 </div>
-                <div class="w-1/2  p-5">
+                <div class="w-1/2  p-5 hidden md:block">
                     <img class="rounded-2xl mt-7" src="https://img.freepik.com/free-vector/sign-concept-illustration_114360-125.jpg" alt="">
                 </div>
             </section>

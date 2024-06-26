@@ -156,7 +156,7 @@
             <div class="relative z-10">
                 <div
                     class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-                    <svg class="h-[60rem] w-[100rem] flex-none stroke-blue-600 opacity-20" aria-hidden="true">
+                    <svg class="h-[30rem] w-[100rem] flex-none stroke-blue-600 opacity-20" aria-hidden="true">
                         <defs>
                             <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
                                 patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
