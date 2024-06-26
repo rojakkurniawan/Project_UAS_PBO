@@ -6,6 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Landing Page</title>
       @vite('resources/css/app.css')
+      <link rel=”icon” href=”https://i.ibb.co/D8DDFFN/1719337919935.png”>
       <style>
          .cursor-pointer {
             cursor: pointer;

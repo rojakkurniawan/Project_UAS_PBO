@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     @vite('resources/css/app.css')
+    <link rel=”icon” href=”https://i.ibb.co/D8DDFFN/1719337919935.png”>
     {{-- <style>
         input[type="text"], input[type="email"], input[type="password"] {
             color: #000; /* Mengatur warna teks menjadi hitam */
