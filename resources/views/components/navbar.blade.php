@@ -1,8 +1,10 @@
 <style>
-  /* :root{
-    background-color: white;
-    color: white;
-  } */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        background-color: white;
+        color: white;
+      }
+    }
 </style>
 
 <header class="bg-white">
