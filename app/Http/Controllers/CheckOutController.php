@@ -65,6 +65,6 @@ class CheckOutController extends Controller
         $address->country = $request->input('country');
         $address->save();
 
-        return response()->json(['message' => 'Alamat sudah dimasukkan.']);
+        return response()->json(['message' => 'Alamat has been registered.']);
     }
 }
