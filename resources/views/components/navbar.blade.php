@@ -1,8 +1,8 @@
 <style>
-  :root{
+  /* :root{
     background-color: white;
     color: white;
-  }
+  } */
 </style>
 
 <header class="bg-white">
@@ -29,7 +29,7 @@
        <div class="flex items-stretch">
          <a href="/profile" class="mr-2">
            <div class="avatar placeholder">
-             <div class="bg-neutral w-12 rounded-full">
+             <div class="bg-neutral w-12 rounded-full text-white">
               <span><?php
                 $name = Auth::user()->name;
                 $initials = '';

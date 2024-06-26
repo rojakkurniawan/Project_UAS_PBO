@@ -7,20 +7,15 @@
     <title>Home</title>
     @vite('resources/css/app.css')
     <link rel=”icon” href=”https://i.ibb.co/D8DDFFN/1719337919935.png”>
-    {{-- <style>
-        input[type="text"], input[type="email"], input[type="password"] {
-            color: #000; /* Mengatur warna teks menjadi hitam */
-        }
-    </style> --}}
 </head>
 <body class="bg-gray-100">
     @include('components.navbar')
 
     <div class="flex justify-center items-center min-h-screen">
-        <div class="container mx-auto px-4 py-8 bg-white shadow-md rounded-lg w-1/2">
+        <div class="container mx-auto px-4 py-8 bg-white shadow-md rounded-lg w-full md:w-1/2">
             <div class="px-4 sm:px-0">
                 <h3 class="text-base font-semibold leading-7 text-gray-900 text-center">Profile</h3>
-                <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
+                <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details.</p>
             </div>
             <div class="border-t border-gray-100">
                 @if (session('status'))

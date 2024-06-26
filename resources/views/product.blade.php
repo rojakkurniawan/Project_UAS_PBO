@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Home</title>
       @vite('resources/css/app.css')
-      <link rel=”icon” href=”https://i.ibb.co/D8DDFFN/1719337919935.png”>
+      <link rel="icon" href="https://i.ibb.co/D8DDFFN/1719337919935.png">
       <style>
          .cursor-pointer {
             cursor: pointer;
@@ -25,34 +25,33 @@
      <section class="max-w-screen-xl mx-auto my-4 p-4">
         <div class="bg-gray-900 p-10 rounded-lg shadow-lg flex">
             @foreach($product as $product)
-            <img src="{{$product->url_image_product}}" alt="Product Image" class="w-1/3 h-auto rounded mr-8">
-            <div class="w-2/3">
-                <h2 class="text-lg font-semibold mb-2">{{$product->name_product}}</h2>
+            <div class="flex flex-col md:flex-row md:items-center">
+            <img src="{{$product->url_image_product}}" alt="Product Image" class="md:w-1/3 md:h-auto w-full h-auto rounded mr-8">
+            <div class="w-full">
+                <h2 class="text-lg font-semibold text-white mb-2 mt-5">{{$product->name_product}}</h2>
                 <p class="text-neutral-300 mb-4">{{$product->description_product}}</p>
                 <p class="text-xl text-white font-semibold mb-6">Rp {{ number_format($product->price_product, 0, ',', '.') }}</p>
-                <button class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700" 
-                        id="add-to-cart-btn" 
-                        data-url-image ="{{$product->url_image_product}}"
-                        data-name="{{$product->name_product}}" 
-                        data-description="{{$product->description_product}}" 
-                        data-price="{{$product->price_product}}">Buy Now!</button>
+                <div class="flex flex-col md:flex-row md:items-center">
+                    <button class="btn bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700 w-full md:w-auto border-0" 
+                            onclick="showModal({{ $product->id_product }}, '{{ $product->name_product }}', '{{ $product->url_image_product }}', '{{ $product->description_product }}', {{ $product->price_product }})">Buy Now</button>
+                </div>
             </div>
+        </div>
             @endforeach
         </div>
-        <div id="popup" class="popup border-2 border-grey-900 rounded-lg bg-white p-8 w-1/4 shadow-xl absolute top-40 left-0 right-0 mx-auto hidden">
-            <h2 class="text-lg font-bold text-gray-900">Confirm Your Purchase</h2>
-            <p class="mt-2 text-sm text-gray-500">
-                Are you sure you want to confirm your purchase?
-            </p>
-            <div class="mt-4 flex gap-2">
-                <button type="button" class="rounded bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-100" id="confirm-purchase-btn">
-                    Yes, Confirm
-                </button>
-                <button type="button" class="rounded bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-slate-100" id="close-popup-btn">
-                    No, Continue Shopping
-                </button>
+        
+        <dialog id="my_modal_4" class="modal">
+            <div class="modal-box w-11/12 max-w-5xl">
+              <h3 class="text-lg font-bold">Confirm Your Purchase</h3>
+              <p class="py-4">Are you sure you want to confirm your purchase?</p>
+              <div class="modal-action">
+                <form method="dialog">
+                  <button class="btn bg-blue-900 text-white hover:bg-blue-700" type="button" id="confirm-purchase-btn">Confirm</button>
+                  <button class="btn">Close</button>
+                </form>
+              </div>
             </div>
-        </div>    
+        </dialog>
     </section>
 
     <section class="max-w-screen-xl mx-auto my-8 p-4 bg-gray-900 text-white rounded-lg">
@@ -74,9 +73,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">{{$product -> judul_1}}</h2>
+                       <h2 class="text-lg font-bold">{{$product->judul_1}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                        {{$product -> desc_1}}
+                        {{$product->desc_1}}
                        </p>
                    </div>
                </div>
@@ -90,9 +89,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">{{$product -> judul_2}}</h2>
+                       <h2 class="text-lg font-bold">{{$product->judul_2}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                        {{$product -> desc_2}}
+                        {{$product->desc_2}}
                        </p>
                    </div>
                </div>
@@ -106,9 +105,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">{{$product -> judul_3}}</h2>
+                       <h2 class="text-lg font-bold">{{$product->judul_3}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                        {{$product -> desc_3}}
+                        {{$product->desc_3}}
                        </p>
                    </div>
                </div>
@@ -122,9 +121,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">{{$product -> judul_4}}</h2>
+                       <h2 class="text-lg font-bold">{{$product->judul_4}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                        {{$product -> desc_4}}
+                        {{$product->desc_4}}
                        </p>
                    </div>
                </div>
@@ -138,9 +137,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">{{$product -> judul_5}}</h2>
+                       <h2 class="text-lg font-bold">{{$product->judul_5}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                        {{$product -> desc_5}}
+                        {{$product->desc_5}}
                        </p>
                    </div>
                </div>
@@ -154,9 +153,9 @@
                        </svg>
                    </span>
                    <div>
-                       <h2 class="text-lg font-bold">{{$product -> judul_6}}</h2>
+                       <h2 class="text-lg font-bold">{{$product->judul_6}}</h2>
                        <p class="mt-1 text-sm text-gray-300">
-                        {{$product -> desc_6}}
+                        {{$product->desc_6}}
                        </p>
                    </div>
                </div>
@@ -167,29 +166,28 @@
     @include('components.footer')
    </body>
    <script>
-    document.querySelectorAll('.card').forEach(card => {
-          card.addEventListener('click', () => {
-              window.location.href = card.getAttribute('data-url');
-          });
-      });
-    document.getElementById('add-to-cart-btn').addEventListener('click', function() {
-       document.getElementById('popup').classList.remove('hidden');
-    });
-    document.getElementById('close-popup-btn').addEventListener('click', function() {
-       document.getElementById('popup').classList.add('hidden');
-    });
+    function showModal(id, name, urlImage, description, price) {
+        document.getElementById('confirm-purchase-btn').setAttribute('data-id', id);
+        document.getElementById('confirm-purchase-btn').setAttribute('data-name', name);
+        document.getElementById('confirm-purchase-btn').setAttribute('data-url-image', urlImage);
+        document.getElementById('confirm-purchase-btn').setAttribute('data-description', description);
+        document.getElementById('confirm-purchase-btn').setAttribute('data-price', price);
+        document.getElementById('my_modal_4').showModal();
+    }
 
     document.getElementById('confirm-purchase-btn').addEventListener('click', function() {
-        const productName = document.getElementById('add-to-cart-btn').getAttribute('data-name');
-        const productDescription = document.getElementById('add-to-cart-btn').getAttribute('data-description');
-        const urlImage = document.getElementById('add-to-cart-btn').getAttribute('data-url-image');
-        const productPrice = document.getElementById('add-to-cart-btn').getAttribute('data-price');
+        const id = this.getAttribute('data-id');
+        const name = this.getAttribute('data-name');
+        const urlImage = this.getAttribute('data-url-image');
+        const description = this.getAttribute('data-description');
+        const price = this.getAttribute('data-price');
         
         const url = new URL(window.location.origin + '/checkout');
-        url.searchParams.set('name', productName);
+        url.searchParams.set('id', id);
+        url.searchParams.set('name', name);
         url.searchParams.set('url_image', urlImage);
-        url.searchParams.set('description', productDescription);
-        url.searchParams.set('price', productPrice);
+        url.searchParams.set('description', description);
+        url.searchParams.set('price', price);
 
         window.location.href = url.toString();
     });

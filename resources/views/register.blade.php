@@ -18,6 +18,16 @@
                 <div class="w-full md:w-1/2 p-6 md:pl-10">
                     <h1 class="text-2xl pb-2 flex align-middle text-white">Register Page</h1>
                     <p class="text-sm text-white">If you're already a member, please log in <a href="/login" class="text-yellow-500">here</a></p>
+                    @if ($errors->any())
+                        <div>
+                                @foreach ($errors->all() as $error)
+                                <div class="p-4 mb-4 rounded-lg alert alert-warning mt-6" role="alert">
+                                    {{ $error }}
+                                </div>
+                                @endforeach
+
+                        </div>
+                    @endif
                     @if(Session::has('success'))
                         <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50  mt-6" role="alert">
                             {{ Session::get('success') }}

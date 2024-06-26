@@ -15,7 +15,7 @@
 
     <div class="max-w-xl mx-auto bg-white shadow-md rounded-lg p-6 pt-12 mt-10">
         <img src="https://static.vecteezy.com/system/resources/previews/021/745/921/original/black-checkmark-icon-in-a-circle-isolated-on-white-background-vector.jpg" 
-        alt="Thank You Image" class="mx-auto mb-4 w-32 h-32">
+        alt="Thank You Image" class="mx-auto mb-4 w-20 h-20">
         <h1 class="text-center text-5xl font-bold text-black pt-5 pb-5">Thank You!</h1>
         <h3 class="text-center text-xl text-black">Your order was completed successfully</h3>
         <p class="text-center text-gray-700 mt-4">
