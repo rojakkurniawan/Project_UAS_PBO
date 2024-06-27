@@ -44,9 +44,34 @@
              </div>
            </div>
          </a>
-         <form action=" {{ route('logout') }}" method="POST"> @csrf @method('DELETE') <button type="submit" class="btn btn-neutral rounded-btn text-white">Logout<span aria-hidden="true">&rarr;</span></button>
+         <form action=" {{ route('logout') }}" method="POST"> @csrf @method('DELETE')           <button type="button" onclick="openModal()" class="btn btn-neutral rounded-btn text-white">Logout<span aria-hidden="true">&rarr;</span></button>
          </form>
        </div>
      </div>
    </nav>
  </header>
+
+ <div id="logoutModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden rounded-lg">
+  <div class="bg-black p-8 rounded-lg shadow-lg">
+    <h2 class="text-xl text-white font-semibold mb-4">Confirm Logout</h2>
+    <p class="mb-6 text-white">Are you sure you want to logout?</p>
+    <div class="flex justify-end">
+      <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded mr-2">Cancel</button>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Logout</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+ <script>
+  function openModal() {
+    document.getElementById('logoutModal').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('logoutModal').classList.add('hidden');
+  }
+</script>

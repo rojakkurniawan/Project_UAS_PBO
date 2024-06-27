@@ -65,7 +65,7 @@
       </div>
 
       
-      <div id="address-form" class="flex justify-center items-center mt-10 drop-shadow-2xl" style="margin-bottom: -20px;">
+      <div id="address-form" class="flex justify-center items-center mt-10 drop-shadow-2xl" style="margin-bottom: -20px; margin-right: 48px; margin-left: 48px;">
         <div class="container mx-auto px-4 py-8 bg-gray-900 shadow-md rounded-lg max-w-[850px]">
             @if($there_has_address == 0)
             <h3 class="text-lg font-bold text-white mb-4">It looks like you haven't entered your address, please enter it first!</h3>
@@ -133,7 +133,7 @@
               
                     <div class="mt-8">
                       <ul class="space-y-4">
-                        <li class="flex gap-4">
+                        <li class="flex gap-4 flex-col md:flex-row">
                           <img
                             src="<?php echo htmlspecialchars($_GET['url_image']); ?>"
                             alt=""
